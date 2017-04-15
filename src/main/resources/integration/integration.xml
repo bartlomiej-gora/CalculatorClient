@@ -5,7 +5,8 @@
        xmlns:http="http://www.springframework.org/schema/integration/http"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
-        http://www.springframework.org/schema/integration/http ">
+        http://www.springframework.org/schema/integration/http
+        http://www.springframework.org/schema/integration/http/spring-integration-http.xsd ">
 
     <int:channel id="requestChannel"/>
     <int:channel id="replyChannel"/>
@@ -14,7 +15,9 @@
     <int:gateway service-interface="pl.bgora.CalculatorService" default-request-channel="requestChannel"
                  default-reply-channel="replyChannel" error-channel="errorChannel" id="calculatorGateway"/>
 
-    <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get"/>
+    <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get" url="https://calculatorweb.herokuapp/calculate/{equation}">
+
+    </http:outbound-gateway>
 
 
 </beans>
