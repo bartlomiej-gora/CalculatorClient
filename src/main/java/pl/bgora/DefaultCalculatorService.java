@@ -1,6 +1,5 @@
 package pl.bgora;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -8,7 +7,7 @@ import javax.annotation.Resource;
 @Component
 public class DefaultCalculatorService implements CalculatorService {
 
-    @Autowired
+    @Resource
     CalculatorGateway calculatorGateway;
 
     @Override

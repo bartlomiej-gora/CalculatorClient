@@ -12,11 +12,13 @@
     <int:channel id="replyChannel"/>
     <int:channel id="errorChannel"/>
 
-    <int:gateway service-interface="pl.bgora.CalculatorService" default-request-channel="requestChannel"
-                 default-reply-channel="replyChannel" error-channel="errorChannel" id="calculatorGateway"/>
+    <int:gateway id="calculatorGateway" service-interface="pl.bgora.CalculatorService" default-request-channel="requestChannel"
+                 default-reply-channel="replyChannel" error-channel="errorChannel" />
 
-    <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get" url="https://calculatorweb.herokuapp/calculate/{equation}">
-
+    <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get"
+                           url="https://calculatorweb.herokuapp/calculate/{equation}"
+                           expected-response-type="String">
+        <http:uri-variable name="equation" expression="payload"/>
     </http:outbound-gateway>
 
 
