@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:http="http://www.springframework.org/schema/integration/http"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+        http://www.springframework.org/schema/integration/http ">
+
+    <int:channel id="requestChannel"/>
+    <int:channel id="replyChannel"/>
+    <int:channel id="errorChannel"/>
+
+    <int:gateway service-interface="pl.bgora.CalculatorService" default-request-channel="requestChannel"
+                 default-reply-channel="replyChannel" error-channel="errorChannel" id="calculatorGateway"/>
+
+    <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get"/>
+
+
+</beans>
