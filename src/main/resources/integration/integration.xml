@@ -18,7 +18,7 @@
     </int:gateway>
 
     <http:outbound-gateway request-channel="requestChannel" reply-channel="replyChannel" http-method="get"
-                           url="https://calculatorweb.herokuapp/calculate/{equation}"
+                           url="http://calculatorweb.herokuapp.com/{equation}"
                            expected-response-type="String">
         <http:uri-variable name="equation" expression="payload"/>
     </http:outbound-gateway>
