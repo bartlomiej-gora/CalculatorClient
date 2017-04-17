@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
-
 @Controller
 public class ViewController {
 
@@ -22,7 +20,7 @@ public class ViewController {
     @PostMapping("/calculatorClientView")
     public String postView(ModelAndView modelAndView) {
         String equation = (String) modelAndView.getModel().get("equation");
-        String result = calculatorService.getVaule(equation);
+        String result = calculatorService.excecute(equation);
         modelAndView.addObject("value", result);
         return "/calculatorView";
     }

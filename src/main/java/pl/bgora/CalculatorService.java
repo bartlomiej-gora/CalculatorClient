@@ -2,5 +2,5 @@ package pl.bgora;
 
 public interface CalculatorService {
 
-    String getVaule(String equation);
+    String excecute(String equation);
 }

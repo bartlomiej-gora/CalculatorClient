@@ -1,17 +1,17 @@
 package pl.bgora;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-@Component
+@Service
 public class DefaultCalculatorService implements CalculatorService {
 
     @Resource
-    CalculatorGateway calculatorGateway;
+    CalculatorGateway defaultCalculatorGateway;
 
     @Override
-    public String getVaule(String equation) {
-        return calculatorGateway.getVaule(equation);
+    public String excecute(String equation) {
+        return defaultCalculatorGateway.execute(equation);
     }
 }
