@@ -12,8 +12,8 @@
 <body>
 <div id="header">Calculator Web Spring Integration Client</div>
 <form action="/calculatorClientView" method="POST">
-Równianie: <input type="text" id="equation"/></br>
-<input type="submit"></input>
+Równianie: <input type="text" name="equation"/></br>
+<input type="submit"/>
 </form>
 </br></br>
 Wynik: ${value}
