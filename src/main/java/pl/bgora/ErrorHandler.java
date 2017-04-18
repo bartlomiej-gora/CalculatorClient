@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class ErrorHandler {
 
     public void handleError(Exception ex){
-
+        throw new RuntimeException("ERROR!!!!");
     }
 }
