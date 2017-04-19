@@ -13,17 +13,17 @@ public class ViewController {
     @Autowired
     CalculatorService calculatorService;
 
-    @GetMapping("/calculatorClientView")
+    @GetMapping("/clientView")
     public String getView() {
-        return "/calculatorView";
+        return "/view";
     }
 
-    @PostMapping("/calculatorClientView")
+    @PostMapping("/clientView")
     public ModelAndView postView(@RequestParam String equation) {
         ModelAndView modelAndView = new ModelAndView();
         String result = calculatorService.excecute(equation);
         modelAndView.addObject("value", result);
-        modelAndView.setViewName("/calculatorView");
+        modelAndView.setViewName("/view");
         return modelAndView;
     }
 }
