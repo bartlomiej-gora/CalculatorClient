@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -18,10 +19,11 @@ public class ViewController {
     }
 
     @PostMapping("/calculatorClientView")
-    public String postView(ModelAndView modelAndView) {
-        String equation = (String) modelAndView.getModel().get("equation");
+    public ModelAndView postView(@RequestParam String equation) {
+        ModelAndView modelAndView = new ModelAndView();
         String result = calculatorService.excecute(equation);
         modelAndView.addObject("value", result);
-        return "/calculatorView";
+        modelAndView.setViewName("/calculatorView");
+        return modelAndView;
     }
 }
