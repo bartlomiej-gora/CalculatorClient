@@ -5,7 +5,7 @@ Zadanie:
 
 1. Sklonuj, lub "sforkuj" repozytorium CalculatorClient
 2. Stwórz Konfigurację Spring Integration (integration/integration.xml) do połączenia 
-z aplikacją pod adresem http://calculatorweb.herokuapp.com/calculate, używając metody http GET przekaż parametr równania
+z aplikacją pod adresem http://calculatorweb.herokuapp.com/calculate, używając metody http GET i implementacji wzorca Gateway przekaż parametr równania
 (Możesz sprawdzić obsługiwane równiania wchodząc na http://calculatorweb.herokuapp.com)
 3. Opdal localhost:8080/clientView i wyślij swoje równanie
 4. Stwórz Transformer, który będzie przerabiał wynik z jsona, na String z wynikiem
