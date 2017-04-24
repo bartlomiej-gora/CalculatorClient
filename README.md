@@ -1,5 +1,5 @@
 # CalculatorClient
-Program ćwiczebny dla uczestników szkolenia "Spring Integration dla Zielonych"
+Program ćwiczebny dla uczestników szkolenia "Spring Integration na początek"
 
 Zadanie:
 
