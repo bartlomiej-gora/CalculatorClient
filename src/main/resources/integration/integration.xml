@@ -9,6 +9,6 @@
         http://www.springframework.org/schema/integration/http/spring-integration-http.xsd ">
 
 
-
+    <bean id="calculatorGateway" class="pl.bgora.DefaultCalculatorGateway"/>
 
 </beans>
