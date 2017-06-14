@@ -1,5 +1,7 @@
 # CalculatorClient
-Program ćwiczebny dla uczestników szkolenia "Spring Integration na początek"
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f86ddbf64a8242b9b25e74a72a045509)](https://www.codacy.com/app/bartlomiej.gora/CalculatorClient?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bartlomiej-gora/CalculatorClient&amp;utm_campaign=Badge_Grade)
+
+Program ćwiczeniowy dla uczestników szkolenia "Spring Integration na początek"
 
 Zadanie:
 
